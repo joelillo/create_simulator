@@ -7,5 +7,5 @@ project(create_simulator)
 
   # Declare that this catkin package's runtime dependencies
   catkin_package(
-   CATKIN_DEPENDS gazebo7
+   CATKIN_DEPENDS gazebo_ros gazebo_plugins teleop_twist_keyboard
   )
