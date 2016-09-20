@@ -1,0 +1,24 @@
+#! /usr/bin/env python
+
+import rospy
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+
+def cmd_callback(data):
+    global pub
+    pub.publish(data)
+
+def odom_callback(data):
+    return
+
+
+def planner():
+    global pub
+    rospy.init_node('sample_planner')
+    pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
+    rospy.Subscriber("raw_cmd_vel", Twist, cmd_callback)
+    rospy.Subscriber("odom", Odometry, odom_callback)
+    rospy.spin()
+
+
+planner()
