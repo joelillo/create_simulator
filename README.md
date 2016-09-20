@@ -1,18 +1,23 @@
-# create_simulator
+# Create_simulator
 Fork from the osrf irobot create gazebo model.
 
+Implemented changes found here: http://sauravag.com/2015/02/how-to-use-irobot-create-with-ros-indigo/
 
-# Usage
-**Start ROS and Gazebo**
 
+# Install
 ```
-roslaunch gazebo_ros empty_world.launch
-```
-
-```
-rosrun gazebo_ros  spawn_model -file ~/catkin_workspace/src/create/model-1_4.sdf -sdf -model create
+cd ~/[path_to_your_catkin_workspace]
 ```
 
 ```
-rostopic pub /cmd_vel geometry_msgs/Twist -- '[1.0, 0.0, 0.0]' '[0.0, 0.0, 1]'
+rosdep update
+```
+
+```
+rosdep install --from-paths src --ignore-src --rosdistro kinetic
+```
+
+# Run
+```
+roslaunch create_simulator create_simulator.launch
 ```
