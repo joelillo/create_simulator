@@ -1,0 +1,11 @@
+<launch>
+  <!-- Start the Gazebo simulation -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+  <!-- Spawn an irobot create into Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find create_simulator)/model/model-1_4.sdf -sdf -model create" />
+
+  <!-- Start a keyboard controller -->
+  <node name="teleop_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" />
+
+</launch>
