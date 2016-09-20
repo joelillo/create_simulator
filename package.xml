@@ -1,0 +1,16 @@
+<package>
+  <name>create_simulator</name>
+  <version>0.1.0</version>
+  <description>
+    Gazebo ROS simulator for irobot create
+  </description>
+  <maintainer email="joelillo113@gmail.com">Joe Lillo</maintainer>
+  <license>Creative Commons Attribution 3.0 Unported</license>
+  <author>Joe Lillo</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
+  <run_depend>teleop_twist_keyboard</run_depend>
+</package>
