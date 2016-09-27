@@ -34,6 +34,10 @@ rosdep install --from-paths src --ignore-src --rosdistro kinetic
 
 # Run
 ```
+cd ~/[path_to_your_catkin_workspace]
+```
+
+```
 source devel/setup.bash
 ```
 
