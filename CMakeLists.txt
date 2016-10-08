@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 2.8.0)
 project(create_simulator)
 
 # Get the information about this package's buildtime dependencies
